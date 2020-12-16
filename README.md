@@ -1,1 +1,0 @@
-# sotnic.github.io

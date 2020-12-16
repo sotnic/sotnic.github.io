@@ -4,36 +4,137 @@
         <meta charset="utf-8" />
         <title>Blog Website</title>
         <meta name="blog" content="programming" />
+        <style>
+            body {
+                margin: auto;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                grid-auto-rows: minmax(50px, auto); 
+                grid-template-areas: 
+                "hd hd hd hd hd hd hd hd"
+                "main main main main main main sd sd"
+                "ft ft ft ft ft ft ft ft";
+            }
+
+            .box {
+                border: 1px solid black;
+            }
+
+            .header {
+                grid-area: hd;
+                font-family: monospace, Arial, Helvetica, sans-serif;
+                border-bottom: 1px solid #96adc2;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 20px;
+            }
+
+            .header img {
+                width: 150px;
+            }
+
+            .header h1 a:link, a:visited {
+                text-decoration: none;
+                color: #385385
+            }
+
+            .header h1 a:hover {
+                color: #5d6e8f;
+            }
+
+            .main {
+                grid-area: main;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                padding-top: 20px;
+            }
+            
+            .card img {
+                width: 100%;
+            }
+
+            .sidebar {
+                grid-area: sd;
+            }
+
+            .footer {
+                grid-area: ft;
+                text-align: center;
+            }
+
+            .card {
+                width: 70%;
+                margin: 10px;
+            }
+
+            #subscribe a:link, a:visited {
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: 5px 10px;
+                border: 1px solid #a4afba;
+                border-radius: 3px;
+            }
+
+            #subscribe a:hover {
+                border: 1px solid #6b7d92;
+            }
+
+        </style>
     </head>
     <body>
         <div class="container">
-            <header class="header box">
-                <nav>
-
-                </nav>
+            <header class="header">
+                <img src="" alt="" />
+                <h1><a href="index.html">#Blogoff</a></h1>
+                <span id="subscribe"><a href="">Subscribe</a></span>
             </header>
-            <main class="main box">
+            <main class="main">
                 <article class="card">
-                    <h2>Post card</h2>
-                    <img src="" alt="">
+                    <h2>Web design and development workflow</h2>
+                    <img src="assets/images/web-dev.jpg" alt="Web development workflow"><br>
                     <p></p>
                 </article>
                 <article class="card">
-                    <h2>Post card</h2>
-                    <img src="" alt="">
+                    <h2>Initial planning of the web development process</h2>
+                    <img src="assets/images/inital-planning.jpg" alt="Initial planning of website">
                     <p></p>
                 </article>
                 <article class="card">
-                    <h2>Post card</h2>
-                    <img src="" alt="">
+                    <h2>Writing the proposal and signing the contract</h2>
+                    <img src="assets/images/Contract.jpg" alt="Contract">
+                    <p></p>
+                </article>
+                <article class="card">
+                    <h2>Theme or website built from scratch?</h2>
+                    <img src="assets/images/theme-choice.jpg" alt="Theme choice">
+                    <p></p>
+                </article>
+                <article class="card">
+                    <h2>Mockups and wireframing – the design part of the website development process</h2>
+                    <img src="assets/images/mock-website.jpg" alt="Mockups and wireframing">
+                    <p></p>
+                </article>
+                <article class="card">
+                    <h2>Coding the website. First and other versions of the website</h2>
+                    <img src="assets/images/coding.jpg" alt="Coding part">
+                    <p></p>
+                </article>
+                <article class="card">
+                    <h2>Deployment and optimization of the website</h2>
+                    <img src="assets/images/deployment.jpg" alt="Deployment and Optimization">
                     <p></p>
                 </article>
             </main>
-            <aside class="sidebar box">
-                Sidebar
+            <aside class="sidebar">
+                
             </aside>   
-            <footer class="footer box">
-                Footer
+            <footer class="footer">
+                <h5>Copyright &#169; 2020 Alexander Sotnykov. All rights reserved.</h5>
             </footer>   
         </div>
     </body>
