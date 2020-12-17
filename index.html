@@ -34,10 +34,11 @@
             }
 
             .header img {
-                width: 150px;
+                width: 110px;
             }
 
-            .header h1 a:link, a:visited {
+            .header a:link, a:visited {
+                align-self: center;
                 text-decoration: none;
                 color: #385385
             }
@@ -48,18 +49,92 @@
 
             .main {
                 grid-area: main;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #333;
+            }
+
+            .main li {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                padding-top: 20px;
+            }
+
+            .main a:link, a:visited {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .main h2 {
+                margin: auto;
+            }
+
+            .main h2:hover {
+                color: #5d6e8f;
+            }
+
+            .main p {
+                font-size: 18px;
+            }
+
+            .card {
+                width: 74%;
+                margin: 20px 0;
+            }
+
+            .card li {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
             }
             
             .card img {
                 width: 100%;
+                margin-top: 10px;
+            }
+
+            .card button {
+                font-weight: 500;
+                font-size: 18px;
+                padding: 10px 15px;
+                border-radius: 5px;
+                border: 2px solid #a4afba;
+            }
+
+            .card button:hover {
+                color: #ffffff;
+                background: #acc0d4;
+                cursor: pointer;
             }
 
             .sidebar {
                 grid-area: sd;
+            }
+
+            .sidebar h3, ul {
+                margin-top: 20px;
+                padding-left: 50px;
+            }
+
+            .sidebar ul {
+                margin-left: 5px;
+                margin-right: 5px;
+                border-top: 1px solid #d3dfeb;
+            }
+
+            .sidebar li {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 15px;
+                font-size: 18px;
+            }
+
+            .sidebar a:link, a:visited {
+                text-decoration: none;
+            }
+
+            .sidebar a:hover {
+                color: #5d6e8f;
             }
 
             .footer {
@@ -67,14 +142,8 @@
                 text-align: center;
             }
 
-            .card {
-                width: 70%;
-                margin: 10px;
-            }
-
             #subscribe a:link, a:visited {
                 text-decoration: none;
-                text-transform: capitalize;
                 padding: 5px 10px;
                 border: 1px solid #a4afba;
                 border-radius: 3px;
@@ -82,6 +151,11 @@
 
             #subscribe a:hover {
                 border: 1px solid #6b7d92;
+            }
+
+            #author {
+                font-family: monospace, Arial, Helvetica, sans-serif;
+                font-size: 14px;              
             }
 
         </style>
@@ -94,44 +168,114 @@
                 <span id="subscribe"><a href="">Subscribe</a></span>
             </header>
             <main class="main">
-                <article class="card">
-                    <h2>Web design and development workflow</h2>
-                    <img src="assets/images/web-dev.jpg" alt="Web development workflow"><br>
-                    <p></p>
-                </article>
-                <article class="card">
-                    <h2>Initial planning of the web development process</h2>
-                    <img src="assets/images/inital-planning.jpg" alt="Initial planning of website">
-                    <p></p>
-                </article>
-                <article class="card">
-                    <h2>Writing the proposal and signing the contract</h2>
-                    <img src="assets/images/Contract.jpg" alt="Contract">
-                    <p></p>
-                </article>
-                <article class="card">
-                    <h2>Theme or website built from scratch?</h2>
-                    <img src="assets/images/theme-choice.jpg" alt="Theme choice">
-                    <p></p>
-                </article>
-                <article class="card">
-                    <h2>Mockups and wireframing – the design part of the website development process</h2>
-                    <img src="assets/images/mock-website.jpg" alt="Mockups and wireframing">
-                    <p></p>
-                </article>
-                <article class="card">
-                    <h2>Coding the website. First and other versions of the website</h2>
-                    <img src="assets/images/coding.jpg" alt="Coding part">
-                    <p></p>
-                </article>
-                <article class="card">
-                    <h2>Deployment and optimization of the website</h2>
-                    <img src="assets/images/deployment.jpg" alt="Deployment and Optimization">
-                    <p></p>
-                </article>
+                <ul>
+                    <li>
+                        <article class="card">
+                            <a href=""><h2>Web design and development workflow</h2></a>
+                            <span id="author">John Smith | December 9, 2020</span>
+                            <img src="assets/images/web-dev.jpg" alt="Web development workflow"><br>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type 
+                                specimen book.
+                            </p>
+                            <button type="button"><a href="">Continue reading &#8594;</a></button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card">
+                            <a href=""><h2>Initial planning of the web development process</h2></a>
+                            <span id="author">Martha Gibson | December 2, 2020</span>
+                            <img src="assets/images/inital-planning.jpg" alt="Initial planning of website">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type 
+                                specimen book.
+                            </p>
+                            <button type="button"><a href="">Continue reading &#8594;</a></button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card">
+                            <a href=""><h2>Writing the proposal and signing the contract</h2></a>
+                            <span id="author">Robert Grey | November 19, 2020</span>
+                            <img src="assets/images/Contract.jpg" alt="Contract">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type 
+                                specimen book.
+                            </p>
+                            <button type="button"><a href="">Continue reading &#8594;</a></button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card">
+                            <a href=""><h2>Theme or website built from scratch?</h2></a>
+                            <span id="author">Alexander Goodman | October 12, 2020</span>
+                            <img src="assets/images/theme-choice.jpg" alt="Theme choice">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type 
+                                specimen book.
+                            </p>
+                            <button type="button"><a href="">Continue reading &#8594;</a></button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card">
+                            <a href=""><h2>Mockups and wireframing – the design part of the website development process</h2></a>
+                            <span id="author">Maria Gonsales | October 5, 2020</span>
+                            <img src="assets/images/mock-website.jpg" alt="Mockups and wireframing">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type 
+                                specimen book.
+                            </p>
+                            <button type="button"><a href="">Continue reading &#8594;</a></button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card">
+                            <a href=""><h2>Coding the website. First and other versions of the website</h2></a>
+                            <span id="author">Bob Crane | September 27, 2020</span>
+                            <img src="assets/images/coding.jpg" alt="Coding part">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type 
+                                specimen book.
+                            </p>
+                            <button type="button"><a href="">Continue reading &#8594;</a></button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card">
+                            <a href=""><h2>Deployment and optimization of the website</h2></a>
+                            <span id="author">Bruce Wayne | September 18, 2020</span>
+                            <img src="assets/images/deployment.jpg" alt="Deployment and Optimization">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type 
+                                specimen book.
+                            </p>
+                            <button type="button"><a href="">Continue reading &#8594;</a></button>
+                        </article>
+                    </li>
+                </ul>
             </main>
             <aside class="sidebar">
-                
+                <h3>Most viewed posts</h3>
+                <ul>
+                    <li><a href="">Coding the website. First and other versions of the website</a></li>
+                    <li><a href="">Web design and development workflow</a></li>
+                    <li><a href="">Mockups and wireframing – the design part of the website development process</a></li>
+                </ul>
             </aside>   
             <footer class="footer">
                 <h5>Copyright &#169; 2020 Alexander Sotnykov. All rights reserved.</h5>
