@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Post Page</title>
+        <meta name="blog" content="programming" />
+        <style>
+            body {
+                margin: auto;
+            }
+            .container {
+                display: grid;
+                grid-template-columns: repeat(8, 1fr);
+                grid-auto-rows: minmax(50px, auto); 
+                grid-template-areas: 
+                "hd hd hd hd hd hd hd hd"
+                "main main main main main main sd sd"
+                "ft ft ft ft ft ft ft ft";
+            }
+
+            .header {
+                grid-area: hd;
+                font-family: monospace, Arial, Helvetica, sans-serif;
+                border-bottom: 1px solid #96adc2;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 20px;
+            }
+
+            .header img {
+                width: 110px;
+            }
+
+            .header a:link, a:visited {
+                align-self: center;
+                text-decoration: none;
+                color: #385385
+            }
+
+            .header h1 a:hover {
+                color: #5d6e8f;
+            }
+
+            .main {
+                grid-area: main;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #333;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+
+            .content {
+                width: 74%;
+                margin: 20px 0;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .content h1 {
+                margin: 20px 10px 0 0;
+            }
+
+            .content ul {
+                list-style-type: square;
+            }
+
+            .sidebar {
+                grid-area: sd;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin: 20px 20px;
+            }
+
+            .sidebar ul {
+                display: flex;
+                flex-direction: row;
+                align-items: space-between;
+                list-style-type: none;
+                padding-top: 20px;
+            }
+
+            .sidebar img {
+                width: 50%;
+            }
+
+            .footer {
+                grid-area: ft;
+                text-align: center;
+            }
+
+            #subscribe a:link, a:visited {
+                text-decoration: none;
+                padding: 5px 10px;
+                border: 1px solid #a4afba;
+                border-radius: 3px;
+            }
+
+            #subscribe a:hover {
+                border: 1px solid #6b7d92;
+            }
+
+            #author {
+                font-family: monospace, Arial, Helvetica, sans-serif;
+                font-size: 14px;              
+            }
+
+            #quote {
+                padding: 20px 20px;
+                font-style: italic;
+                border: 1px solid #a4afba;
+                border-radius: 5px;
+                background: #d2dce6;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <img src="" alt="" />
+                <h1><a href="../index.html">#Blogoff</a></h1>
+                <span id="subscribe"><a href="">Subscribe</a></span>
+            </header>
+            <main class="main">
+                <div class="content">
+                    <h1>Web design and development workflow</h1>
+                    <span id="author">John Smith | December 9, 2020</span>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book.
+                    </p>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in 
+                        a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+                        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+                        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, 
+                        and going through the cites of the word in classical literature, discovered the 
+                        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus 
+                        Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. 
+                        This book is a treatise on the theory of ethics, very popular during the Renaissance. 
+                        The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </p><br>
+                    <blockquote id="quote" cite="https://blog.hatchcoding.com/6-great-quotes-about-the-power-of-coding">
+                        “All of my friends who have younger siblings who are going to college or high school - my number one 
+                        piece of advice is: You should learn how to program.”<br><br>
+                        <strong>- Mark Zuckerberg</strong>
+                    </blockquote><br>
+                    <p>
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. 
+                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
+                        and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have 
+                        evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                    </p>
+                    <h2>Initial planning of the web development process</h2>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered 
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly believable. 
+                        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing 
+                        hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined 
+                        chunks as necessary, making this the first true generator on the Internet. 
+                        It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, 
+                        to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, 
+                        injected humour, or non-characteristic words etc.
+                    </p>
+                    <h3>Web development life cycle</h3>
+                    <ul>
+                        <li>Gathering relevant information</li>
+                        <li>Sitemap and wireframe</li>
+                        <li>Design: layout</li>
+                        <li>Coding</li>
+                        <li>Testing, review, and launch</li>
+                        <li>Maintenance and updation</li>
+                    </ul>
+                    <p>
+                        Sed imperdiet nisl sed lacus suscipit interdum. Morbi scelerisque leo sapien, nec dignissim sem feugiat vitae. 
+                        Morbi tincidunt tristique consequat. Phasellus efficitur, lectus non euismod ultricies, magna quam posuere elit, 
+                        vel ullamcorper ligula purus id metus. Praesent malesuada accumsan accumsan. Fusce ac erat blandit, aliquet nisi ut, 
+                        facilisis lacus. Phasellus blandit odio eu est auctor egestas.
+                    </p>
+                    <p>
+                        Donec vitae tincidunt lorem. Maecenas id ligula mi. Vestibulum et sem a ligula hendrerit dapibus eget nec metus. 
+                        Proin vitae velit ac erat hendrerit condimentum a non mi. Sed tincidunt lacus nisi, sit amet pulvinar nulla euismod ut. 
+                        Proin efficitur tortor et quam pharetra, vitae facilisis dolor ultrices. Fusce in ante egestas, viverra ante eget, 
+                        consectetur ligula. Sed at ligula semper, maximus felis sed, rutrum eros. Praesent eget porttitor mi.
+                    </p><br>
+                    <blockquote id="quote" cite="https://blog.hatchcoding.com/6-great-quotes-about-the-power-of-coding">
+                        “Everybody should learn to program a computer, because it teaches you how to think.”<br><br>
+                        <strong>- Steve Jobs</strong>
+                    </blockquote><br>
+                    <p>
+                        Morbi non fringilla lorem. Donec egestas velit et dignissim aliquam. Orci varius natoque penatibus et magnis 
+                        dis parturient montes, nascetur ridiculus mus. Aenean vitae neque tortor. In hac habitasse platea dictumst. 
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam a mi laoreet, 
+                        elementum massa non, hendrerit orci. In eget varius diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                        Sed at lectus sit amet urna consectetur lacinia ut rutrum leo. Sed posuere tellus facilisis turpis mattis fermentum. 
+                        Maecenas sit amet tincidunt nibh, a convallis ligula. Donec vel arcu sagittis, vestibulum lectus faucibus, 
+                        ullamcorper neque. Aliquam non dolor vitae magna vulputate sagittis.
+                    </p>
+                </div>
+            </main>
+            <aside class="sidebar">
+                <div>
+                    <h3>About</h3>
+                    <p>
+                        Nullam blandit purus sit amet ipsum interdum fringilla. In elementum leo sed magna faucibus, nec consectetur tortor molestie. 
+                        Phasellus eu finibus ex. Vivamus quis neque ante. Aenean accumsan libero rutrum dolor aliquet, vitae semper erat consectetur. 
+                        Mauris lobortis est id enim auctor, a maximus velit iaculis. Mauris non semper tellus.
+                    </p>
+                </div>
+                <div>
+                    <h3>Share</h3>
+                    <ul>
+                        <li><a href="#"><img src="../assets/images/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="#"><img src="../assets/images/insta.png" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="../assets/images/twitter.png" alt="Twitter"></a></li>
+                    </ul>
+                </div>
+            </aside>
+            <footer class="footer">
+                <h5>Copyright &#169; 2020 Alexander Sotnykov. All rights reserved.</h5>
+            </footer>
+        </div>
+    </body>
+</html>
