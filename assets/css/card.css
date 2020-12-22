@@ -1,0 +1,29 @@
+.card {
+    width: 74%;
+    margin: 20px 0;
+}
+
+.card img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+button {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #a4afba;
+}
+
+button:hover {
+    color: #ffffff;
+    background: #acc0d4;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    button {
+        font-size: 0.8em;
+    }
+}
